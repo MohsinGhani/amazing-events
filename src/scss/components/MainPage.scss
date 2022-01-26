@@ -1,0 +1,116 @@
+.main-page-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .bg-image {
+    // background: url("./../../assets/img/main-bg.png") center center cover
+    //   no-repeat fixed;
+    background-image: url("./../../assets/img/main-bg.png");
+    // background-position-y: -135px;
+    background-repeat: no-repeat;
+    top: 64px;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    color: white;
+    text-align: center;
+  }
+  @media only screen and (max-width: 767px) {
+    .bg-image {
+      // background: url("./../../assets/img/main-bg.png") center center cover
+      //   no-repeat fixed;
+      background-image: url("./../../assets/img/main-bg.png");
+      background-position-y: -50px;
+      background-position-x: -50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 650px;
+      opacity: 0.5;
+      position: relative;
+    }
+  }
+
+  .main-heading-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    width: 100%;
+
+    .main-heading {
+      font-size: 4em;
+      color: map-get($theme-colors, white);
+      text-shadow: 5px 5px 10px map-get($theme-colors, primary-color);
+    }
+    .main-paragraph {
+      font-size: 2em;
+      color: map-get($theme-colors, white);
+      text-shadow: 0px 0px 5px map-get($theme-colors, black);
+      text-align: center;
+    }
+  }
+  .main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5em;
+
+    .main-page-contant {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .primay-btn {
+        background-color: map-get($theme-colors, primary-color);
+        width: auto;
+        margin-bottom: 1em;
+        text-align: center;
+      }
+      .secondary-btn {
+        background-color: map-get($theme-colors, secondary-color);
+        width: auto;
+        text-align: center;
+      }
+      .question-heading {
+        font-size: 3em;
+        color: map-get($theme-colors, primary-color);
+        margin: 1em 0;
+        text-align: center;
+      }
+
+      .question-slector {
+        justify-content: center;
+        flex-direction: row;
+        // align-items: center;
+        // align-content: center;
+        width: auto;
+      }
+
+      .box-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5em;
+        font-size: 1.5em;
+        border-radius: 5px;
+        cursor: pointer;
+        width: fit-content;
+
+        &:hover {
+          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        }
+      }
+    }
+  }
+}

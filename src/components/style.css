@@ -1,0 +1,7 @@
+.list-interviews {
+  color: mediumblue;
+}
+.list-interviews:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
